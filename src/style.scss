@@ -1,3 +1,19 @@
+@use './scss/abstract/index' as *;
+@use './scss/layout/' as layout;
+
 body {
-  background-color: grey;
+  background-color: $bg-color;
+}
+
+h1 {
+  font-family: $header-font;
+  color: $text-color;
+  text-transform: capitalize;
+  font-size: 88px;
+  font-weight: 600;
+}
+
+p {
+  font-family: $text-font;
+  color: $text-color;
 }

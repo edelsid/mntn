@@ -1,4 +1,14 @@
 @use 'colors' as colors;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@font-face {
+  font-family: Gilroy;
+  src: url('/src/fonts/Gilroy-ExtraBold.otf');
+  font-weight: 800;
+}
+
+$header-font: 'Playfair Display', serif;
+$text-font: 'Gilroy';
 
 $width-sm: 480px;
 $width-md: 720px;
