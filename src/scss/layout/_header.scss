@@ -1,0 +1,27 @@
+@use '../abstract/index.scss' as *;
+
+header {
+  padding-top: 64px;
+  font-family: $text-font;
+}
+
+.nav {
+  &__list {
+    @include flex-standard;
+    gap: 40px;
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+
+  &::before {
+    content: url("././img/svg/account.svg");
+    width: 20px;
+    height: 20px;
+    user-select: none;
+  }
+}

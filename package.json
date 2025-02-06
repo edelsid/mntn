@@ -1,5 +1,5 @@
 {
-  "name": "dandelion",
+  "name": "mntn",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
+    "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.5.3",
     "sass": "^1.84.0",
     "sass-loader": "^16.0.4",

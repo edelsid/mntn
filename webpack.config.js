@@ -24,11 +24,20 @@ module.exports = {
           "style-loader",
           "css-loader",
           "sass-loader"
-        ]
+        ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        type: 'asset/inline',
+        test: /\.html$/i,
+        use: 'html-loader',
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: (name) => {
+            const path = name.filename.split("/").slice(1, -1).join("/");
+            return `${path}/[name][ext]`;
+        }},
       },
       {
         test: /\.txt$/,
