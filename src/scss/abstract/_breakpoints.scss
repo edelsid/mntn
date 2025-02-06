@@ -1,0 +1,51 @@
+@use './variables' as var;
+
+$breakpoints: (
+  "sm": var.$width-sm,
+  "md": var.$width-md,
+  "lg": var.$width-lg,
+  "xl": var.$width-xl,
+  "xxl": var.$width-xxl,
+);
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: map-get($breakpoints, "xxl")) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: calc(map-get($breakpoints, "xxl") + 1px)) {
+    @content;
+  }
+}
+
+@mixin land {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portr {
+  @media (orientation: portrait) {
+    @content;
+  }
+}

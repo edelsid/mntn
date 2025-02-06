@@ -1,0 +1,67 @@
+@use './colors' as colors;
+@use './breakpoints' as br;
+
+@mixin absolute-filler {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@mixin flex-standard {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin animation ($characteristic, $time) {
+  -webkit-transition: $characteristic $time ease-in-out;
+  -moz-transition: $characteristic $time ease-in-out;
+  -o-transition: $characteristic $time ease-in-out;
+  transition: $characteristic $time ease-in-out;
+}
+
+@mixin animation-all($time) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+@mixin background {
+  background-color: colors.$standart-light;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin gradient ($deg1, $percent1, $percent2, $color1, $color2) {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    $deg1,
+    $color1 $percent1,
+    $color2 $percent2,
+  );
+}

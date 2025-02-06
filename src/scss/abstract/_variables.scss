@@ -1,0 +1,41 @@
+@use 'colors' as colors;
+
+$width-sm: 480px;
+$width-md: 720px;
+$width-lg: 960px;
+$width-xl: 1120px;
+$width-xxl: 1440px;
+
+:root {
+
+}
+
+@media (max-width: $width-sm) {
+  :root {
+
+  }
+}
+
+@media (min-width: ($width-sm + 1px)) and (max-width: $width-md) {
+  :root {
+
+  }
+}
+
+@media (min-width: ($width-md + 1px)) and (max-width: $width-lg) {
+  :root {
+
+  }
+}
+
+@media (min-width: ($width-lg + 1px)) and (max-width: $width-xxl) {
+  :root {
+
+  }
+}
+
+@media (min-width: calc($width-xxl + 1px)) {
+  :root {
+
+  }
+}
