@@ -1,8 +1,12 @@
 @use '../abstract/index.scss' as *;
 
 header {
-  padding-top: 64px;
+  padding-block: 64px;
   font-family: $text-font;
+}
+
+ul {
+  margin: 0;
 }
 
 .nav {
@@ -24,4 +28,8 @@ header {
     height: 20px;
     user-select: none;
   }
+}
+
+.subtitle {
+  font-size: 1rem;
 }

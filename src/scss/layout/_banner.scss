@@ -1,0 +1,59 @@
+@use '../abstract/index.scss' as *;
+
+.banner {
+  margin-block: 138px 843px;
+
+  &__main {
+    width: 54%;
+    @include flex-column;
+    gap: 32px;
+  }
+}
+
+.title_banner {
+  font-size: 4.9rem;
+  line-height: 1.136;
+}
+
+.socials, .socials__list {
+  @include flex-column;
+  gap: 28px;
+  align-items: center;
+}
+
+.socials {
+  &__cta {
+    display: inline-block;
+    writing-mode: tb;
+    cursor: default;
+  }
+
+  &__link {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+
+    & img {
+      vertical-align: bottom;
+      width: 24px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
+
+.slider {
+  @include flex-column;
+  align-items: end;
+
+  &__item {
+    padding: 19px 32px 19px 0;
+    border-right: 2px solid #ffffff80;
+    user-select: none;
+    cursor: pointer;
+    
+
+    &.active {
+      border-color: $text-color;
+    }
+  }
+}

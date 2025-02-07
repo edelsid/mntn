@@ -9,6 +9,7 @@ body {
   margin: 0;
   background-color: $bg-color;
   color: $text-color;
+  font-family: $text-font;
   font-size: 18px;
 }
 
@@ -30,5 +31,68 @@ a {
     align-items: center;
     width: 89%;
     max-width: 1760px;
+  }
+}
+
+.title {
+  margin: 0;
+  font-family: $header-font;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  color: $accent-color;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+
+  &::before {
+    content: "";
+    width: 72px;
+    height: 2px;
+    background-color: $accent-color;
+  }
+}
+
+.btn {
+  font-family: $text-font;
+  font-size: $text-font-size;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  padding: 0;
+  line-height: 1.21;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    aspect-ratio: 2 / 3;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &_standart {
+    &::after {
+      filter: brightness(0) saturate(100%) invert(74%) sepia(63%) 
+        saturate(271%) hue-rotate(357deg) brightness(104%) contrast(97%);
+    }
+  }
+
+  &_banner {
+    color: $text-color;
+
+    &::after {
+      background-image: url("./img/svg/arrow_downward.svg");
+      transform: rotate(90deg);
+      filter: brightness(0) saturate(100%) invert(100%) sepia(100%) 
+        saturate(0%) hue-rotate(186deg) brightness(107%) contrast(101%);
+    }
   }
 }
