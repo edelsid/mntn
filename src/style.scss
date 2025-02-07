@@ -89,7 +89,7 @@ a {
     color: $text-color;
 
     &::after {
-      background-image: url("./img/svg/arrow_downward.svg");
+      background-image: url("./img/svg/arrow.svg");
       transform: rotate(90deg);
       filter: brightness(0) saturate(100%) invert(100%) sepia(100%) 
         saturate(0%) hue-rotate(186deg) brightness(107%) contrast(101%);
