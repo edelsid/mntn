@@ -1,0 +1,37 @@
+@use '../abstract/index.scss' as *;
+
+footer {
+  margin-bottom: 130px;
+
+  & .container {
+    @include flex-standard;
+  }
+  
+}
+
+.footer {
+  &__info {
+    @include flex-column(0);
+    justify-content: space-between;
+    width: 24%;
+  }
+
+  &__cta {
+    width: 87.3%;
+  }
+
+  &__links {
+    width: 38.7%;
+    @include flex-standard;
+  }
+}
+
+.copyright {
+  opacity: 0.5;
+}
+
+.links {
+  &__list {
+    @include flex-column(16px);
+  }
+}
