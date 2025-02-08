@@ -18,6 +18,10 @@ footer {
 
   &__cta {
     width: 87.3%;
+    
+    & p {
+      line-height: 1.8;
+    }
   }
 
   &__links {

@@ -11,11 +11,8 @@ ul {
 .nav {
   &__list {
     @include flex-standard;
+    align-items: center;
     gap: 40px;
-  }
-
-  &__item {
-    height: 2.2rem;
   }
 
   &__link {

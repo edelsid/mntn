@@ -28,6 +28,10 @@
     gap: 27px;
   }
 
+  &__desc p {
+    line-height: 1.8;
+  }
+
   &__headers {
     @include flex-column(27px);
     position: relative;
