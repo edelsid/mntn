@@ -24,23 +24,22 @@
   align-items: center;
 }
 
-.socials {
-  &__cta {
-    display: inline-block;
-    writing-mode: tb;
-    cursor: default;
-  }
+.socials__cta {
+  display: inline-block;
+  writing-mode: tb;
+  cursor: default;
+}
 
-  &__link {
-    display: block;
-    width: fit-content;
-    height: fit-content;
+.link_socials {
+  display: block;
+  width: fit-content;
+  height: fit-content;
 
-    & img {
-      vertical-align: bottom;
-      width: 22px;
-      aspect-ratio: 1 / 1;
-    }
+  & img {
+    vertical-align: bottom;
+    width: 22px;
+    aspect-ratio: 1 / 1;
+    @include animation(transform, 0.5s);
   }
 }
 
@@ -58,5 +57,11 @@
     &.active {
       border-color: $text-color;
     }
+  }
+}
+
+@media (hover: hover) {
+  .link_socials img:hover {
+    transform: scale(1.4);
   }
 }

@@ -7,7 +7,6 @@
 
 html {
   font-size: 10px;
-  scrollbar-gutter: stable both-edges;
 }
 
 body {
@@ -127,6 +126,10 @@ a {
   vertical-align: middle;
 }
 
+.link {
+  @include animation(color, 0.5s);
+}
+
 @keyframes bounce {
   from {
     transform: rotate(90deg) translateX(0px);
@@ -168,5 +171,10 @@ a {
         animation: bounce 1.5s ease infinite;
       }
     }
+  }
+
+  .link:hover {
+    color: $accent-color;
+    text-decoration: underline;
   }
 }

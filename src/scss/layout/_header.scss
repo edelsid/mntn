@@ -8,16 +8,14 @@ ul {
   margin: 0;
 }
 
-.nav {
-  &__list {
-    @include flex-standard;
-    align-items: center;
-    gap: 40px;
-  }
+.nav__list {
+  @include flex-standard;
+  align-items: center;
+  gap: 40px;
+}
 
-  &__link {
-    line-height: 1.21;
-  }
+.link {
+  line-height: 1.21;
 }
 
 .account {
@@ -31,5 +29,14 @@ ul {
     width: 20px;
     height: 20px;
     user-select: none;
+    @include animation(transform, 0.5s);
+  }
+}
+
+@media (hover: hover) {
+  .account:hover{
+    &::before {
+      transform: scale(1.25);
+    }
   }
 }

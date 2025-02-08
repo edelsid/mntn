@@ -41,6 +41,8 @@
   &__img {
     width: 38.7%;
     object-fit: cover;
+    user-select: none;
+    pointer-events: none;
   }
 }
 
