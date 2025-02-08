@@ -2,7 +2,6 @@
 
 header {
   padding-block: 64px;
-  font-family: $text-font;
 }
 
 ul {
@@ -13,6 +12,14 @@ ul {
   &__list {
     @include flex-standard;
     gap: 40px;
+  }
+
+  &__item {
+    height: 2.2rem;
+  }
+
+  &__link {
+    line-height: 1.21;
   }
 }
 
@@ -28,8 +35,4 @@ ul {
     height: 20px;
     user-select: none;
   }
-}
-
-.subtitle {
-  font-size: 1rem;
 }

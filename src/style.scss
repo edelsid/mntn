@@ -5,12 +5,19 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+  scrollbar-gutter: stable both-edges;
+}
+
 body {
   margin: 0;
+  width: 100vw;
   background-color: $bg-color;
   color: $text-color;
   font-family: $text-font;
-  font-size: 18px;
+  font-size: $text-font-size;
+  overflow-x: hidden;
 }
 
 ul {
@@ -26,11 +33,16 @@ a {
 .container {
   margin-inline: auto;
 
+  &_default {
+    width: 76.145%;
+    max-width: 1462px;
+  }
+
   &_wide {
+    width: 91.7%;
+    max-width: 1760px;
     @include flex-standard;
     align-items: center;
-    width: 89%;
-    max-width: 1760px;
   }
 }
 
@@ -45,7 +57,9 @@ a {
   gap: 32px;
   color: $accent-color;
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.6rem;
+  line-height: 1.2;
+  margin: 0;
 
   &::before {
     content: "";
@@ -73,12 +87,15 @@ a {
     display: block;
     width: 16px;
     aspect-ratio: 2 / 3;
+    background-image: url("./img/svg/arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
   }
 
-  &_standart {
+  &_default {
+    color: $accent-color;
+
     &::after {
       filter: brightness(0) saturate(100%) invert(74%) sepia(63%) 
         saturate(271%) hue-rotate(357deg) brightness(104%) contrast(97%);
@@ -89,7 +106,6 @@ a {
     color: $text-color;
 
     &::after {
-      background-image: url("./img/svg/arrow.svg");
       transform: rotate(90deg);
       filter: brightness(0) saturate(100%) invert(100%) sepia(100%) 
         saturate(0%) hue-rotate(186deg) brightness(107%) contrast(101%);

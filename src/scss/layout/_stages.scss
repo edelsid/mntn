@@ -1,0 +1,56 @@
+@use '../abstract/index.scss' as *;
+
+.stages {
+  margin-bottom: 200px;
+
+  &__list {
+    @include flex-column(200px);
+  }
+}
+
+.title_stage {
+  width: 88%;
+  font-size: $header-font-size;
+  line-height: 1.2;
+}
+
+.stage {
+  @include flex-standard;
+  align-items: center;
+
+  &_reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__text {
+    width: 43.23%;
+    @include flex-column(27px);
+    gap: 27px;
+  }
+
+  &__desc p {
+    line-height: 1.8;
+  }
+
+  &__headers {
+    @include flex-column(27px);
+    position: relative;
+    z-index: 3;
+  }
+
+  &__img {
+    width: 38.7%;
+    object-fit: cover;
+  }
+}
+
+.headers__bg {
+  position: absolute;
+  z-index: 2;
+  font-size: 24rem;
+  line-height: 1;
+  opacity: 0.1;
+  top: -106px;
+  left: -154px;
+  user-select: none;
+}
