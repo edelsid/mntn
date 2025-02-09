@@ -23,9 +23,10 @@
   }
 
   &__text {
-    width: 43.23%;
+    width: 53.1%;
     @include flex-column(27px);
     gap: 27px;
+    padding-left: 150px;
   }
 
   &__desc p {
@@ -40,7 +41,6 @@
 
   &__img {
     width: 38.7%;
-    object-fit: cover;
     user-select: none;
     pointer-events: none;
   }

@@ -29,6 +29,11 @@ a {
   color: $text-color;
 }
 
+picture img {
+  object-fit: cover;
+  width: 100%;
+}
+
 .container {
   margin-inline: auto;
 
