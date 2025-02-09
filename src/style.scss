@@ -47,7 +47,7 @@ picture img {
     width: 91.7%;
     max-width: 1760px;
     @include flex-standard;
-    align-items: cover;
+    align-items: center;
   }
 }
 
