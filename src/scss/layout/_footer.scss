@@ -2,11 +2,12 @@
 
 footer {
   margin-bottom: 130px;
+  position: relative;
+  z-index: 4;
 
   & .container {
     @include flex-standard;
   }
-  
 }
 
 .footer {

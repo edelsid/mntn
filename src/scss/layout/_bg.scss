@@ -1,21 +1,47 @@
 @use '../abstract/index.scss' as *;
 
 .bg {
-  height: 1900px;
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
+  &__main {
+    position: absolute;
+    height: 1900px;
+    width: 100vw;
 
-  &_back, &_middle, &_foreground {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 48.73%;
+      width: 100%;
+      bottom: 10.84%;
+      background-image: url('./img/webp/VG.webp');
+      background-image: image-set(
+        url("./img/webp/VG.webp") type("image/webp"), 
+        url("./img/png/VG.png") type("image/png")
+      );
+      background-image: -webkit-image-set(
+        url("./img/webp/VG.webp") type("image/webp"), 
+        url("./img/png/VG.png") type("image/png")
+      );
+      z-index: 2;
+    }
+  }
+
+  &__rest {
+    height: -webkit-fill-available;
+    position: absolute;
+    width: 100vw;    
+    top: 1900px;
+    z-index: 3;
+    background-color: $bg-color;
+  }
+
+  &_back, &_middle {
     position: absolute;
     left: 0;
     width: 100%;
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    z-index: -2;
   }
 
   &_back {
@@ -29,6 +55,7 @@
       url("./img/webp/HG.webp") type("image/webp"), 
       url("./img/png/HG.png") type("image/png")
     );
+    z-index: -2;
   }
 
   &_middle {
@@ -43,26 +70,14 @@
       url("./img/webp/MG.webp") type("image/webp"), 
       url("./img/png/MG.png") type("image/png")
     );
+    z-index: -2;
   }
 
-  &_foreground {
-    height: 48.73%;
-    bottom: 10.84%;
-    background-image: url('./img/webp/VG.webp');
-    background-image: image-set(
-      url("./img/webp/VG.webp") type("image/webp"), 
-      url("./img/png/VG.png") type("image/png")
-    );
-    background-image: -webkit-image-set(
-      url("./img/webp/VG.webp") type("image/webp"), 
-      url("./img/png/VG.png") type("image/png")
-    );
-  }
+  
 
   &__gradients {
     @include absolute-filler;
     @include flex-column(0);
-    z-index: -1;
   }
 
   &__gradient {
@@ -77,6 +92,7 @@
 
     &_bottom {
       height: 36.84%;
+      z-index: 3;
       background: linear-gradient(180deg, #0b1d2600 0%, #0B1D26 61.38%);
     }
   }

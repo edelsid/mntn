@@ -1,0 +1,54 @@
+@use '../abstract/index.scss' as *;
+
+.utilities {
+  position: fixed;
+  top: 326px;
+  z-index: 5;
+  width: 100%;
+}
+
+.socials, .socials__list {
+  @include flex-column(28px);
+  align-items: center;
+}
+
+.socials__cta {
+  display: inline-block;
+  writing-mode: tb;
+  cursor: default;
+}
+
+.link_socials {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+
+  & img {
+    vertical-align: bottom;
+    width: 22px;
+    aspect-ratio: 1 / 1;
+    @include animation(transform, 0.5s);
+  }
+}
+
+.slider {
+  @include flex-column(0);
+  align-items: end;
+
+  &__item {
+    padding: 19px 32px 19px 0;
+    border-right: 2px solid #ffffff80;
+    user-select: none;
+    cursor: pointer;
+    
+    &.active {
+      border-color: $text-color;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .link_socials img:hover {
+    transform: scale(1.4);
+  }
+}

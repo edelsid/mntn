@@ -1,7 +1,13 @@
 @use '../abstract/index.scss' as *;
 
 .stages {
+  position: relative;
   margin-bottom: 200px;
+
+  & .container {
+    position: relative;
+    z-index: 5;
+  }
 
   &__list {
     @include flex-column(200px);

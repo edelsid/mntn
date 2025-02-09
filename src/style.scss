@@ -17,6 +17,7 @@ body {
   font-family: $text-font;
   font-size: $text-font-size;
   overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
 }
 

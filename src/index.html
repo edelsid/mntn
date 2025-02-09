@@ -11,14 +11,16 @@
   <title>MNTN</title>
 </head>
 <body>
-  <div class="bg">
-    <div class="bg_back"></div>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__main">
+      <div class="bg_back"></div>
       <div class="bg_middle"></div>
-      <div class="bg_foreground"></div>
       <div class="bg__gradients">
         <div class="bg__gradient_top"></div>
         <div class="bg__gradient_bottom"></div>
+      </div>
     </div>
+    <div class="bg__rest"></div>
   </div>
   <header class="header">
     <div class="container container_wide">
@@ -48,7 +50,7 @@
     </div>
   </header>
   <main>
-    <section class="banner">
+    <div class="utilities">
       <div class="container container_wide">
         <aside class="socials">
           <span class="socials__cta">Follow us</span>
@@ -65,21 +67,25 @@
             </li>
           </ul>
         </aside>
-        <div class="banner__main">
-          <hgroup class="banner__headers">
-            <p class="subtitle">A Hiking guide</p>
-            <h1 class="title title_banner">
-              Be prepared for the Mountains and beyond!
-            </h1>
-          </hgroup>
-          <button class="btn btn_banner">scroll down</button>
-        </div>
-        <ul class="slider">
-          <li class="slider__item active">Start</li>
-          <li class="slider__item">01</li>
-          <li class="slider__item">02</li>
-          <li class="slider__item">03</li>
-        </ul>
+        <nav class="nav__slider">
+          <ul class="slider">
+            <li class="slider__item active">Start</li>
+            <li class="slider__item">01</li>
+            <li class="slider__item">02</li>
+            <li class="slider__item">03</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section class="banner">
+      <div class="banner__wrapper">
+        <hgroup class="banner__headers">
+          <p class="subtitle">A Hiking guide</p>
+          <h1 class="title title_banner">
+            Be prepared for the Mountains and beyond!
+          </h1>
+        </hgroup>
+        <button class="btn btn_banner">scroll down</button>
       </div>
     </section>
     <section class="stages">
