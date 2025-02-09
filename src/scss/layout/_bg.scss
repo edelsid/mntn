@@ -1,0 +1,83 @@
+@use '../abstract/index.scss' as *;
+
+.bg {
+  height: 1900px;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+
+  &_back, &_middle, &_foreground {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    z-index: -2;
+  }
+
+  &_back {
+    height: 63.16%;
+    background-image: url('./img/webp/HG.webp');
+    background-image: image-set(
+      url("./img/webp/HG.webp") type("image/webp"), 
+      url("./img/png/HG.png") type("image/png")
+    );
+    background-image: -webkit-image-set(
+      url("./img/webp/HG.webp") type("image/webp"), 
+      url("./img/png/HG.png") type("image/png")
+    );
+  }
+
+  &_middle {
+    height: 75%;
+    top: 24.4%;
+    background-image: url('./img/webp/MG.webp');
+    background-image: image-set(
+      url("./img/webp/MG.webp") type("image/webp"), 
+      url("./img/png/MG.png") type("image/png")
+    );
+    background-image: -webkit-image-set(
+      url("./img/webp/MG.webp") type("image/webp"), 
+      url("./img/png/MG.png") type("image/png")
+    );
+  }
+
+  &_foreground {
+    height: 48.73%;
+    bottom: 10.84%;
+    background-image: url('./img/webp/VG.webp');
+    background-image: image-set(
+      url("./img/webp/VG.webp") type("image/webp"), 
+      url("./img/png/VG.png") type("image/png")
+    );
+    background-image: -webkit-image-set(
+      url("./img/webp/VG.webp") type("image/webp"), 
+      url("./img/png/VG.png") type("image/png")
+    );
+  }
+
+  &__gradients {
+    @include absolute-filler;
+    @include flex-column(0);
+    z-index: -1;
+  }
+
+  &__gradient {
+    &_top, &_bottom {
+      width: 100%;
+    }
+
+    &_top {
+      height: 63.16%;
+      background: linear-gradient(330.24deg, #0b1d2600 31.06%, #0B1D26 108.93%);
+    }
+
+    &_bottom {
+      height: 36.84%;
+      background: linear-gradient(180deg, #0b1d2600 0%, #0B1D26 61.38%);
+    }
+  }
+}

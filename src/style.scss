@@ -17,6 +17,7 @@ body {
   font-family: $text-font;
   font-size: $text-font-size;
   overflow-x: hidden;
+  position: relative;
 }
 
 ul {
@@ -46,7 +47,7 @@ picture img {
     width: 91.7%;
     max-width: 1760px;
     @include flex-standard;
-    align-items: center;
+    align-items: cover;
   }
 }
 
