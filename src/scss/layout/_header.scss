@@ -3,7 +3,7 @@
 header {
   position: relative;
   z-index: 3;
-
+  
   @include xxl {
     padding-block: 64px;
   }

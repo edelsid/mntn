@@ -1,25 +1,28 @@
 @use '../abstract/index.scss' as *;
 
-.utilities {
-  position: fixed;
-  z-index: 999;
-  top: 35.43vh;
-  width: 100%;
-}
-
 .socials, .socials__list {
   @include flex-column(28px);
   align-items: center;
 }
 
+.utility {
+  position: fixed;
+  top: 35.43vh;
+  z-index: 999;
+}
+
 .socials {
-  position: relative;
+  left: 4.15%;
 
   &__cta {
     display: inline-block;
     writing-mode: tb;
     cursor: default;
   }
+}
+
+.nav__slider {
+  right: 4.15%;
 }
 
 .link_socials {
