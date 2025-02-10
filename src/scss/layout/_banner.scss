@@ -1,16 +1,29 @@
 @use '../abstract/index.scss' as *;
 
 .banner {
-  margin-block: 138px;
   height: 1152px;
 
+  @include xxl {
+    margin-block: 138px;
+  }
+
   &__content {
-    margin-inline: auto;
+    margin: auto;
     position: fixed;
-    width: 54%;
     z-index: 1;
     left: 0;
     right: 0;
+    width: 54%;
+
+    @include xl {
+      @include portr {
+        top: 25vh;
+      }
+      
+      @include land {
+        top: 30vh;
+      }
+    }
   }
   
   &__headers {
@@ -20,7 +33,18 @@
 }
 
 .title_banner {
-  font-size: 8.8rem;
   line-height: 1.136;
   text-transform: capitalize;
+
+  @include xxl {
+    font-size: 8.8rem;
+  }
+
+  @include xl {
+    font-size: 6.6rem;
+  }
+
+  @include lg {
+    font-size: 5.6rem;
+  }  
 }

@@ -1,13 +1,22 @@
 @use '../abstract/index.scss' as *;
 
 header {
-  padding-block: 64px;
   position: relative;
   z-index: 3;
+
+  @include xxl {
+    padding-block: 64px;
+  }
+
+  @include xl {
+    padding-block: 34px;
+  }
 }
 
-ul {
-  margin: 0;
+.header__nav {
+  @include md {
+    display: none;
+  }
 }
 
 .nav__list {

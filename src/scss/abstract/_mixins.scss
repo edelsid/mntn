@@ -26,8 +26,8 @@
   gap: $gap;
 }
 
-@mixin flex-column-center {
-  @include flex-column;
+@mixin flex-column-center($gap) {
+  @include flex-column($gap);
   align-items: center;
   text-align: center;
 }

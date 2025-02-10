@@ -2,8 +2,8 @@
 
 .utilities {
   position: fixed;
-  top: 326px;
-  z-index: 5;
+  z-index: 999;
+  top: 35.43vh;
   width: 100%;
 }
 
@@ -12,10 +12,14 @@
   align-items: center;
 }
 
-.socials__cta {
-  display: inline-block;
-  writing-mode: tb;
-  cursor: default;
+.socials {
+  position: relative;
+
+  &__cta {
+    display: inline-block;
+    writing-mode: tb;
+    cursor: default;
+  }
 }
 
 .link_socials {
@@ -46,7 +50,7 @@
 
     & a {
       display: block;
-      padding-block: 19px;
+      padding-block: 1.9rem;
       padding-right: 32px;
     }
   }
