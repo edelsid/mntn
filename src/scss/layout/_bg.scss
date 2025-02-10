@@ -73,18 +73,12 @@
     z-index: -2;
   }
 
-  
-
   &__gradients {
     @include absolute-filler;
     @include flex-column(0);
   }
 
   &__gradient {
-    &_top, &_bottom {
-      width: 100%;
-    }
-
     &_top {
       height: 63.16%;
       background: linear-gradient(330.24deg, #0b1d2600 31.06%, #0B1D26 108.93%);

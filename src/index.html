@@ -22,7 +22,7 @@
     </div>
     <div class="bg__rest"></div>
   </div>
-  <header class="header">
+  <header class="header" id="start">
     <div class="container container_wide">
       <a class="logo__link" href="/">
         <img src="./img/svg/Logo.svg" alt="site logo">
@@ -69,16 +69,24 @@
         </aside>
         <nav class="nav__slider">
           <ul class="slider">
-            <li class="slider__item active">Start</li>
-            <li class="slider__item">01</li>
-            <li class="slider__item">02</li>
-            <li class="slider__item">03</li>
+            <li class="slider__item active">
+              <a href="#start">Start</a>
+            </li>
+            <li class="slider__item">
+              <a href="#stage1">01</a>
+            </li>
+            <li class="slider__item">
+              <a href="#stage2">02</a>
+            </li>
+            <li class="slider__item">
+              <a href="#stage3">03</a>
+            </li>
           </ul>
         </nav>
       </div>
     </div>
     <section class="banner">
-      <div class="banner__wrapper">
+      <div class="banner__content">
         <hgroup class="banner__headers">
           <p class="subtitle">A Hiking guide</p>
           <h1 class="title title_banner">
@@ -91,7 +99,7 @@
     <section class="stages">
       <div class="container container_default">
         <ul class="stages__list">
-          <li class="stages__item">
+          <li class="stages__item" id="stage1">
             <article class="stage start">
               <div class="stage__text">
                 <hgroup class="stage__headers">
@@ -121,7 +129,7 @@
               </picture>
             </article>
           </li>
-          <li class="stages__item">
+          <li class="stages__item" id="stage2">
             <article class="stage stage_reverse gear">
               <div class="stage__text">
                 <hgroup class="stage__headers">
@@ -150,7 +158,7 @@
               </picture>
             </article>
           </li>
-          <li class="stages__item">
+          <li class="stages__item" id="stage3">
             <article class="stage direction">
               <div class="stage__text">
                 <hgroup class="stage__headers">

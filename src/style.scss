@@ -7,11 +7,11 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  width: 100vw;
   background-color: $bg-color;
   color: $text-color;
   font-family: $text-font;
