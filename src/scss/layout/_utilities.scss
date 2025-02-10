@@ -36,13 +36,18 @@
   align-items: end;
 
   &__item {
-    padding: 19px 32px 19px 0;
     border-right: 2px solid #ffffff80;
+    @include animation(border, 0.5s);
     user-select: none;
-    cursor: pointer;
     
     &.active {
       border-color: $text-color;
+    }
+
+    & a {
+      display: block;
+      padding-block: 19px;
+      padding-right: 32px;
     }
   }
 }
