@@ -2,11 +2,18 @@
 @use "sass:map";
 
 $breakpoints: (
+  "xs": var.$width-xs,
   "sm": var.$width-sm,
   "md": var.$width-md,
   "lg": var.$width-lg,
   "xl": var.$width-xl,
 );
+
+@mixin xs {
+  @media (max-width: map.get($breakpoints, "xs")) {
+    @content;
+  }
+}
 
 @mixin sm {
   @media (max-width: map.get($breakpoints, "sm")) {

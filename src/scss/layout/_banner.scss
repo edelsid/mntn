@@ -1,50 +1,115 @@
 @use '../abstract/index.scss' as *;
 
 .banner {
-  height: 1152px;
-
-  @include xxl {
-    margin-block: 138px;
-  }
+  height: 100svh;
+  margin-bottom: 20vh;
 
   &__content {
     margin: auto;
     position: fixed;
     z-index: 1;
+    top: 23.92vh;
     left: 0;
     right: 0;
-    width: 54%;
+    width: 49.5%;
 
-    @include xl {
-      @include portr {
-        top: 25vh;
-      }
-      
-      @include land {
-        top: 30vh;
-      }
+    @include lg {
+      top: 32vh;
+    }
+
+    @include md {
+      width: 70%
     }
   }
   
   &__headers {
-    @include flex-column(32px);
-    margin-bottom: 32px;
+    @include flex-column(1.7em);
+    margin-bottom: 1.7em;
   }
 }
 
 .title_banner {
   line-height: 1.136;
+  font-size: 4.9em;
   text-transform: capitalize;
 
-  @include xxl {
-    font-size: 8.8rem;
-  }
-
-  @include xl {
-    font-size: 6.6rem;
-  }
-
   @include lg {
-    font-size: 5.6rem;
-  }  
+    font-size: 2.8em;
+  }
+}
+
+.utilities {
+  @include sm {
+    display: none;
+  }
+}
+
+.socials, .socials__list {
+  @include flex-column(2.8rem);
+  align-items: center;
+}
+
+.utility {
+  position: fixed;
+  z-index: 999;
+}
+
+.socials {
+  top: 29.92vh;
+  left: 4.15%;
+
+  &__cta {
+    display: inline-block;
+    writing-mode: tb;
+    cursor: default;
+  }
+}
+
+.nav__slider {
+  right: 4.15%;
+  top: 27.17vh;
+}
+
+.link_socials {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+
+  & img {
+    vertical-align: bottom;
+    width: 2.2rem;
+    aspect-ratio: 1 / 1;
+    @include animation(transform, 0.5s);
+  }
+}
+
+.slider {
+  @include flex-column(0);
+  align-items: end;
+
+  &__item {
+    border-right: 2px solid #ffffff80;
+    @include animation(border, 0.5s);
+    user-select: none;
+    
+    &.active {
+      border-color: $text-color;
+    }
+
+    & a {
+      display: block;
+      padding-block: 1.9rem;
+      padding-right: 3.2rem;
+
+      @include lg {
+        padding-right: 2.2rem;
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .link_socials img:hover {
+    transform: scale(1.4);
+  }
 }

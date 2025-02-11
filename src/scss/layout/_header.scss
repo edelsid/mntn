@@ -1,16 +1,12 @@
 @use '../abstract/index.scss' as *;
 
 header {
-  position: relative;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  padding-block: 3.5em;
   z-index: 3;
-  
-  @include xxl {
-    padding-block: 64px;
-  }
-
-  @include xl {
-    padding-block: 34px;
-  }
 }
 
 .header__nav {
@@ -22,7 +18,7 @@ header {
 .nav__list {
   @include flex-standard;
   align-items: center;
-  gap: 40px;
+  gap: 2.22em;
 }
 
 .link {
@@ -32,13 +28,19 @@ header {
 .account {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.44em;
   cursor: pointer;
 
+  @media (max-width: 200px) {
+    display: none;
+  }
+
   &::before {
-    content: url("././img/svg/account.svg");
-    width: 20px;
-    height: 20px;
+    content: "";
+    background-image: url("././img/svg/account.svg");
+    background-size: 1.111em 1.111em;
+    width: 1.111em;
+    height: 1.111em;
     user-select: none;
     @include animation(transform, 0.5s);
   }

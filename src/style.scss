@@ -3,23 +3,13 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
 }
 
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
-
-  @include xxl {
-    font-size: 10px;
-  }
-
-  @include xl {
-    font-size: 9px;
-  }
-
-  @include lg {
-    font-size: 8px;
-  }
+  font-size: 10px;
 }
 
 body {
@@ -27,9 +17,23 @@ body {
   background-color: $bg-color;
   color: $text-color;
   font-family: $text-font;
-  font-size: $text-font-size;
-  overflow-y: scroll;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  font-size: 1.8rem;
+
+  @include xl {
+    font-size: 1.4rem;
+  }
+
+  @include sm {
+    font-size: 1.2rem;
+  }
+
+  @include xs {
+    font-size: 3vw;
+  }
 }
 
 ul {
@@ -54,12 +58,16 @@ picture img {
   &_default {
     max-width: 1462px;
 
+    @include xxl {
+      width: 76.145%;
+    }
+
     @include xl {
       width: 70%;
     }
 
-    @include xxl {
-      width: 76.145%;
+    @include sm {
+      width: 85%;
     }
   }
 
@@ -68,6 +76,10 @@ picture img {
     max-width: 1760px;
     @include flex-standard;
     align-items: center;
+
+    @include lg {
+      width: 85%;
+    }
   }
 }
 
@@ -80,7 +92,7 @@ picture img {
     font-family: $text-font;
     font-size: 2.4rem;
     line-height: 1.3;
-    margin-bottom: 24px;
+    margin-bottom: 1em;
   }
 }
 
@@ -89,37 +101,30 @@ picture img {
   align-items: center;
   color: $accent-color;
   text-transform: uppercase;
-  letter-spacing: 0.6rem;
+  letter-spacing: 0.33em;
   line-height: 1.2;
   margin: 0;
+  gap: 1.8em;
 
-  @include xl {
-    font-size: 1.2rem;
-    gap: 12px;
-  }
-
-  @include xxl {
-    gap: 32px;
+  @include sm {
+    gap: 0;
   }
 
   &::before {
     content: "";
+    width: 4em;
     height: 2px;
     background-color: $accent-color;
 
-    @include xl {
-      width: 32px;
-    }
-
-    @include xxl {
-      width: 72px;
+    @include sm {
+      display: none;
     }
   }
 }
 
 .btn {
   font-family: $text-font;
-  font-size: $text-font-size;
+  font-size: 1.8rem;
   background-color: transparent;
   border: none;
   width: fit-content;
@@ -127,14 +132,22 @@ picture img {
   line-height: 1.21;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 0.9em;
   cursor: pointer;
   @include animation (color, 0.5s);
+
+  @include lg {
+    font-size: 1.6rem;
+  }
+
+  @include xs {
+    font-size: 5vw;
+  }
 
   &::after {
     content: "";
     display: block;
-    width: 16px;
+    width: 0.9em;
     aspect-ratio: 2 / 3;
     background-image: url("./img/svg/arrow.svg");
     background-repeat: no-repeat;
@@ -165,6 +178,10 @@ picture img {
 
 .logo__link img {
   vertical-align: middle;
+
+  @include xs {
+    width: 40vw;
+  }
 }
 
 .link {
