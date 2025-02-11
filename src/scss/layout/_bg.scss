@@ -1,10 +1,18 @@
 @use '../abstract/index.scss' as *;
 
 .bg {
+  @include absolute-filler;
+  display: grid;
+  grid-template-rows: 41.3% 58.7%;
+  width: 100vw;
+  height: 100%;
+
+  @include xl {
+    grid-template-rows: 45% 55%;
+  }
+
   &__main {
-    position: absolute;
-    height: 158.3vh;
-    min-width: 100vw;
+    position: relative;
 
     &::after {
       content: "";
@@ -23,16 +31,13 @@
         url("./img/png/VG.png") type("image/png")
       );
       background-repeat: no-repeat;
+      background-position: top;
       background-size: cover;
       z-index: 2;
     }
   }
 
   &__rest {
-    height: -webkit-fill-available;
-    position: absolute;
-    width: 100vw;    
-    top: 158.3vh;
     z-index: 3;
     background-color: $bg-color;
   }
