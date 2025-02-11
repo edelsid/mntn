@@ -1,8 +1,13 @@
 @use '../abstract/index.scss' as *;
 
 .banner {
-  height: 100svh;
-  margin-bottom: 20vh;
+  height: 190rem;
+
+  @include lg {
+    @include land {
+      height: 130rem;
+    }
+  }
 
   &__content {
     margin: auto;
@@ -18,7 +23,13 @@
     }
 
     @include md {
-      width: 70%
+      @include land {
+        width: 70%
+      }
+
+      @include portr {
+        width: 60%;
+      }
     }
   }
   
@@ -34,6 +45,10 @@
   text-transform: capitalize;
 
   @include lg {
+    font-size: 3.2em;
+  }
+
+  @include sm {
     font-size: 2.8em;
   }
 }
