@@ -50,49 +50,63 @@
     </div>
   </header>
   <main>
+    <div class="utilities">
+      <div class="utilities__menus">
+        <aside class="utility socials">
+          <span class="socials__cta">Follow us</span>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="link link_socials" href="/">
+                <img src="./img/svg/telegram.svg" alt="telegram icon">
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="link link_socials" href="/">
+                <img src="./img/svg/twitter.svg" alt="twitter icon">
+              </a>
+            </li>
+          </ul>
+        </aside>
+        <nav class="utility nav__slider">
+          <ul class="slider">
+            <li class="slider__item active">
+              <a href="#start">Start</a>
+            </li>
+            <li class="slider__item">
+              <a href="#stage1">01</a>
+            </li>
+            <li class="slider__item">
+              <a href="#stage2">02</a>
+            </li>
+            <li class="slider__item">
+              <a href="#stage3">03</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button class="scrollup" type="button">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 49.69 52.72"
+          className="scrollup__img">
+          <path 
+            class="cls-1" 
+            d="M208,274.74l-23.77,50.43L208,313l23.77,12.18Q219.88,300,208,274.74Z" 
+            transform="translate(-183.15 -273.57)"
+          />
+        </svg>
+      </button>
+  </div>
     <section class="banner">
-      <div class="utilities">
-      <aside class="utility socials">
-        <span class="socials__cta">Follow us</span>
-        <ul class="socials__list">
-          <li class="socials__item">
-            <a class="link link_socials" href="/">
-              <img src="./img/svg/telegram.svg" alt="telegram icon">
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="link link_socials" href="/">
-              <img src="./img/svg/twitter.svg" alt="twitter icon">
-            </a>
-          </li>
-        </ul>
-      </aside>
-      <nav class="utility nav__slider">
-        <ul class="slider">
-          <li class="slider__item active">
-            <a href="#start">Start</a>
-          </li>
-          <li class="slider__item">
-            <a href="#stage1">01</a>
-          </li>
-          <li class="slider__item">
-            <a href="#stage2">02</a>
-          </li>
-          <li class="slider__item">
-            <a href="#stage3">03</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="banner__content">
-      <hgroup class="banner__headers">
-        <p class="subtitle">A Hiking guide</p>
-        <h1 class="title title_banner">
-          Be prepared for the Mountains and beyond!
-        </h1>
-      </hgroup>
-      <button class="btn btn_banner">scroll down</button>
-    </div>
+      <div class="banner__content">
+        <hgroup class="banner__headers">
+          <p class="subtitle">A Hiking guide</p>
+          <h1 class="title title_banner">
+            Be prepared for the Mountains and beyond!
+          </h1>
+        </hgroup>
+        <button class="btn btn_banner">scroll down</button>
+      </div>
     </section>
     <section class="stages">
       <div class="container container_default">
@@ -123,7 +137,7 @@
                     expert, or expert backpacker?
                   </p>
                 </div>
-                <button class="btn btn_default">read more</button>
+                <a class="btn btn_default" href="/">read more</a>
               </div>
               <picture class="stage__img img_main">
                 <source srcSet="./img/webp/01.webp" type='image/webp'/>
@@ -158,7 +172,7 @@
                     which will get heavy and chafe wif they get sweaty or wet.
                   </p>
                 </div>
-                <button class="btn btn_default">read more</button>
+                <a class="btn btn_default" href="/">read more</a>
               </div>
               <picture class="stage__img img_main">
                 <source srcSet="./img/webp/02.webp" type='image/webp'/>
@@ -194,7 +208,7 @@
                     the junction..
                   </p>
                 </div>
-                <button class="btn btn_default">read more</button>
+                <a class="btn btn_default" href="/">read more</a>
               </div>
               <picture class="stage__img img_main">
                 <source srcSet="./img/webp/03.webp" type='image/webp'/>
