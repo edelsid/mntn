@@ -36,6 +36,7 @@ footer {
   &__links {
     width: 38.7%;
     @include flex-standard;
+    gap: 1rem;
 
     @include xl {
       width: 50%;
