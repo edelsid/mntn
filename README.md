@@ -1,4 +1,4 @@
-# Поиск персонажей мультсериала "Рик и Морти"
+# MNTN - сайт-путеводитель по хайкингу  
 
 [Макет](https://www.figma.com/design/QbwdN388rbZeolob6d9kQO/MNTN---Landing-Page-(Community)?node-id=0-1&p=f&t=P9ygBnDCAjknm5Fp-0)
 
