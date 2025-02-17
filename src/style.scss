@@ -53,6 +53,10 @@ picture img {
   width: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   margin-inline: auto;
 
@@ -145,25 +149,28 @@ picture img {
     font-size: 5vw;
   }
 
-  &::after {
+  &_img::after {
     content: "";
     display: block;
     width: 0.9em;
     aspect-ratio: 2 / 3;
-    background-image: url("./img/svg/arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     @include animation-all (0.5s);
   }
 
-  &_default {
+  &_more {
     color: $accent-color;
 
     &::after {
       filter: brightness(0) saturate(100%) invert(74%) sepia(63%) 
         saturate(271%) hue-rotate(357deg) brightness(104%) contrast(97%);
     }
+  }
+
+  &_arrow::after{
+    background-image: url("./img/svg/arrow.svg");
   }
 
   &_banner {
@@ -215,7 +222,7 @@ picture img {
 
 @media (hover: hover) {
   .btn {
-    &_default:hover {
+    &_more:hover {
       color: $text-color;
 
       &::after {

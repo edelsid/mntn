@@ -1,5 +1,6 @@
 # MNTN - сайт-путеводитель по хайкингу  
 
+[Деплой](https://edelsid.github.io/mntn/)
 [Макет](https://www.figma.com/design/QbwdN388rbZeolob6d9kQO/MNTN---Landing-Page-(Community)?node-id=0-1&p=f&t=P9ygBnDCAjknm5Fp-0)
 
 Это небольшой сайт, который я сверстала для практики адаптивной верстки при помощи единиц em/rem. Еще в ходе работы я познакомилась с созданием параллакс-эффектов и использованем intersection observer, вспомнила, как работать со сборщиком webpack.

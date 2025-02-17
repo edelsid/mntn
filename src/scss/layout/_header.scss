@@ -9,9 +9,16 @@ header {
   z-index: 3;
 }
 
-.header__nav {
-  @include md {
-    display: none;
+.header {
+  &__nav {
+    @include md {
+      display: none;
+    }
+  }
+  
+  &__misc {
+    @include flex-standard;
+    gap: 2.22em;
   }
 }
 
@@ -19,6 +26,28 @@ header {
   @include flex-standard;
   align-items: center;
   gap: 2.22em;
+}
+
+.burger {
+  &__menu {
+    display: none;
+  }
+  
+  &__btn {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    display: none;
+
+    @include md {
+      display: block;
+    }
+
+    & img {
+      height: 1.111em;
+      vertical-align: bottom;
+    }
+  }
 }
 
 .link {
@@ -35,25 +64,17 @@ header {
     font-size: 1.6rem;
   }
 
-  @include xs {
-    display: none;
+  &__text {
+    @include sm {
+      display: none;
+    }
   }
 
-  &::before {
-    content: "";
-    background-image: url("././img/svg/account.svg");
-    background-size: 1.111em 1.111em;
-    width: 1.111em;
-    height: 1.111em;
+  & img {
     user-select: none;
-    @include animation(transform, 0.5s);
   }
 }
 
 @media (hover: hover) {
-  .account:hover{
-    &::before {
-      transform: scale(1.25);
-    }
-  }
+
 }
