@@ -81,7 +81,8 @@
 
       & img {
         height: 40vh;
-        object-fit: cover;
+        object-fit: contain;
+        background-color: #0000001a;
       }
     }
   }

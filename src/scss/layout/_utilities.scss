@@ -71,7 +71,10 @@
 }
 
 .scrollup {
+  display: none;
+
   @include sm {
+    display: block;
     position: fixed;
     opacity: 0;
     bottom: 3.5rem;
