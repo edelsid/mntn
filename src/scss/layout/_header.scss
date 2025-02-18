@@ -28,25 +28,19 @@ header {
   gap: 2.22em;
 }
 
-.burger {
-  &__menu {
-    display: none;
+.burger__btn {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  display: none;
+
+  @include md {
+    display: block;
   }
-  
-  &__btn {
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-    display: none;
 
-    @include md {
-      display: block;
-    }
-
-    & img {
-      height: 1.111em;
-      vertical-align: bottom;
-    }
+  & img {
+    height: 1.111em;
+    vertical-align: bottom;
   }
 }
 
@@ -73,8 +67,4 @@ header {
   & img {
     user-select: none;
   }
-}
-
-@media (hover: hover) {
-
 }

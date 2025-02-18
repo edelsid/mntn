@@ -1,6 +1,6 @@
 @use '../abstract/index.scss' as *;
 
-.utilities__menus {
+.utilities__sides {
   @include sm {
     display: none;
   }
@@ -13,7 +13,7 @@
 
 .utility {
   position: fixed;
-  z-index: 999;
+  z-index: 990;
 }
 
 .socials {
@@ -82,7 +82,7 @@
     border: 0;
     background-color: $accent-color;
     border-radius: 50%;
-    z-index: 999;
+    z-index: 990;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
     @include animation(opacity, 0.4s);
     @include flex-center;
@@ -93,6 +93,62 @@
 
     &:is(.active) {
       opacity: 1;
+    }
+  }
+}
+
+.burger {
+  &__menu {
+    display: none;
+  
+    @include md { 
+      @include flex-column(0);
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: $bg-color;
+      padding: 3em;
+      z-index: 999;
+      right: -100vw;
+      @include animation(right, 0.5s);
+
+      &:is(.active) {
+        right: 0;
+      }
+    }
+
+    & .nav__list {
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+
+      @include portr {
+        font-size: 2.5rem;
+      }
+      
+      @include land {
+        font-size: 2rem;
+        gap: 1.6rem;
+      }
+    }
+  }
+
+  &__btn {
+    align-self: flex-end;
+  }
+
+  &__logo {
+    align-self: center;
+
+    @include portr {
+      width: 40%;
+    }
+    
+    @include land {
+      width: 15%;
     }
   }
 }

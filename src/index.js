@@ -4,6 +4,8 @@ const anchors = Array.from(document.querySelectorAll(".slider__item"));
 const scrollButton = document.querySelector(".scrollup");
 const observables = Array.from(document.querySelectorAll(".stages__item"));
 const banner = document.querySelector(".header");
+const burger_btns = Array.from(document.querySelectorAll(".burger__btn"));
+const menu = document.querySelector(".burger__menu");
 observables.push(banner);
 
 const options = {
@@ -55,3 +57,15 @@ const observer = new IntersectionObserver(callback, options);
 observables.forEach((item) => {
   observer.observe(item);
 });
+
+//Открытие и закрытие бургер-меню
+const handleBurger = () => {
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+    return;
+  }
+  menu.classList.add("active");
+}
+
+burger_btns.forEach((btn) => 
+  btn.addEventListener("click", () => handleBurger()));
