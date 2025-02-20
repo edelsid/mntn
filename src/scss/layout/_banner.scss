@@ -13,13 +13,13 @@
     margin: auto;
     position: fixed;
     z-index: 1;
-    top: 23.92vh;
+    top: 23.92svh;
     left: 0;
     right: 0;
     width: 49.5%;
 
     @include lg {
-      top: 32vh;
+      top: 32svh;
     }
 
     @include md {

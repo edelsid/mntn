@@ -86,7 +86,8 @@
     background-color: $accent-color;
     border-radius: 50%;
     z-index: 990;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 4px #00000033;
+    user-select: none;
     @include animation(opacity, 0.4s);
     @include flex-center;
 
